@@ -1,0 +1,43 @@
+.Main {
+    display: grid;
+    height: 100vh;
+    justify-content: center;
+    justify-items: center;
+    row-gap: 15px;
+    column-gap: 15px;
+    /* grid-template-columns: 20% 1f 1f 1f 20%; */
+
+    grid-template-columns: minmax(20px, 1fr) repeat(6, minmax(0, 100px)) minmax(20px, 1fr);
+    grid-auto-flow: column;
+    align-items: center;
+    /* grid-template-rows: 100px 200px 100px; */
+    /* justify-items: center; */
+    /* align-items: center; */
+}
+
+.Reddit {
+    width: 100%;
+    grid-column: 2 / 4;
+}
+.Discord {
+    width: 100%;
+    grid-column: 4 / 6;
+}
+.WowForums {
+    width: 100%;
+    grid-column: 6 / 8;
+}
+
+.RowGroup {
+    display: grid;
+    justify-items: center;
+    grid-auto-flow: row;
+    row-gap: 15px;
+}
+
+.ColumnGroup {
+    display: grid;
+    align-items: center;
+    grid-auto-flow: column;
+    column-gap: 15px;
+}
