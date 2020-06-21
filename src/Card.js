@@ -7,6 +7,9 @@ export default function Card({ title }) {
       <div className="additional">
         <h3>{title}</h3>
       </div>
+      <div className="asdf">
+        <p>Sup</p>
+      </div>
     </div>
   );
 }
