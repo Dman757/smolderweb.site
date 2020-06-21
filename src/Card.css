@@ -15,7 +15,7 @@
   text-align: center;
 }
 .card h3 {
-    /* margin: 2px; */
+    padding-left: 10px;
 }
 
 .card .additional {

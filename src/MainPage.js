@@ -36,7 +36,7 @@ export default function MainPage() {
         <Card title="Discord" />
       </div>
       <div className="WowForums">
-        <Card title="Wow Forums" />
+        <Card title="Forums" />
       </div>
     </div>
   );
