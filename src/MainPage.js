@@ -30,13 +30,16 @@ export default function MainPage() {
           <p>asdf</p>
         </div>
         <p>asdf</p> */}
-        <Card title="Reddit" />
+        <Card title="Reddit" url="https://www.reddit.com/r/Smolderweb/" />
       </div>
       <div className="Discord">
-        <Card title="Discord" />
+        <Card title="Discord" url="https://discord.com/invite/gaGYyVz" />
       </div>
       <div className="WowForums">
-        <Card title="Forums" />
+        <Card
+          title="Forums"
+          url="https://us.forums.blizzard.com/en/wow/c/smolderweb"
+        />
       </div>
     </div>
   );
