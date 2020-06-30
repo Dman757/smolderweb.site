@@ -1,3 +1,8 @@
+:root {
+    --grid-column-setup: 2 / 4;
+  }
+
+  
 .Main {
     display: grid;
     height: 100vh;
@@ -7,7 +12,8 @@
     column-gap: 15px;
     /* grid-template-columns: 20% 1f 1f 1f 20%; */
 
-    grid-template-columns: minmax(20px, 1fr) repeat(6, minmax(0, 100px)) minmax(20px, 1fr);
+    grid-template-columns: minmax(20px, 1fr) repeat(2, minmax(0, 100px)) minmax(20px, 1fr);
+    
     grid-auto-flow: column;
     align-items: center;
     /* grid-template-rows: 100px 200px 100px; */
@@ -17,15 +23,15 @@
 
 .Reddit {
     width: 100%;
-    grid-column: 2 / 4;
+    grid-column: var(--grid-column-setup);
 }
 .Discord {
     width: 100%;
-    grid-column: 4 / 6;
+    grid-column: var(--grid-column-setup);
 }
 .WowForums {
     width: 100%;
-    grid-column: 6 / 8;
+    grid-column: var(--grid-column-setup);
 }
 
 .RowGroup {
@@ -41,3 +47,18 @@
     grid-auto-flow: column;
     column-gap: 15px;
 }
+
+@media (min-width: 45em) {    
+    .Main {
+    grid-template-columns: minmax(20px, 1fr) repeat(6, minmax(0, 100px)) minmax(20px, 1fr);
+    }
+    .Reddit {
+        grid-column: 2 / 4;
+    }
+    .Discord {
+        grid-column: 4 / 6;
+    }
+    .WowForums {
+        grid-column: 6 / 8;
+    }
+  }
