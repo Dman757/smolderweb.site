@@ -1,13 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@523&display=swap');
+
+:root {
+  /* font-size: 16px */
+  --grid-column-setup: 2 / 4;
+  --bg-primary: #424242;
+  --bg-secondary: #7e7e7e;
+
+  --horde-primary: #B7262B;
+  --horde-primary-gradiant: #b32328;
+
+  --horde-secondary: #333333;
+  --horde-secondary-gradiant: #838383;
+
+  /* --horde-secondary: #acacac;
+  --horde-secondary-gradiant: #838383; */
+
+  --horde-bg: #121212;
+
+  --alliance-primary: rgb(32, 32, 156);
+  --alliance-secondary: rgb(223, 198, 59);
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Dosis', sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--horde-bg)
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/* horde
+darkred: 6C171A
+lightred: B7262B
+brownish: B1A380
+darkgrey: 4B443C
+blashish: 29211F
+
+
+alts
+red1 9E0C29
+red2 8B1432
+
+*/
+
+
+/*
+https://community.home-assistant.io/t/material-dark-red-frontend-theme/100690
+RedHeader: c33e37
+CardBg: 333333
+
+Font White: d3d3d3
+or cfcfcf
+
+Font Red: #bc3d37
+or d32f2f
+*/

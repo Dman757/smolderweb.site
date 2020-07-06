@@ -1,0 +1,30 @@
+.navbar {
+    top: 0;
+ height: 5rem;
+ width: 100vw;
+ position: fixed;
+ background-color: var(--horde-secondary)
+}
+
+.navbar-nav {
+     list-style: none;
+     padding: 0;
+     margin: 0;
+     display: flex;
+     flex-direction: row;
+     justify-items: center;
+    width: 100%;
+
+}
+
+.nav-item {
+ height: 100%;
+}
+
+.nav-link {
+    display: flex;
+    justify-content: center;
+    width: 5rem;
+    color: var(--text-primary);
+    text-decoration: none;
+}
