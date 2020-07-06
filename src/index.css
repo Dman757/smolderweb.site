@@ -2,7 +2,8 @@
 
 :root {
   /* font-size: 16px */
-  --grid-column-setup: 2 / 4;
+  --grid-row-setup: 2;
+  --grid-column-setup: 2;
   --bg-primary: #424242;
   --bg-secondary: #7e7e7e;
 

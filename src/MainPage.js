@@ -8,14 +8,13 @@ export default function MainPage() {
   // TODO A dark/light mode toggle but it's HORDE/ALLIANCE
   return (
     <>
-      <NavBar />
-
       {/* <h1>SMOLDERWEB.SITE</h1>
       <h2>
-        Welcome to the unofficial website for the WoW Classic server Smolderweb
-      </h2> */}
+      Welcome to the unofficial website for the WoW Classic server Smolderweb
+    </h2> */}
 
       <div className="Main">
+        <NavBar />
         <div className="Reddit">
           {/* <p>asdf</p>
         <div className="ColumnGroup">
