@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import logo from "./logo.svg";
 // import "./App.css";
 import "./MainPage.css";
@@ -6,6 +6,21 @@ import Card from "./Card";
 import NavBar from "./NavBar";
 export default function MainPage() {
   // TODO A dark/light mode toggle but it's HORDE/ALLIANCE
+
+  useEffect(async () => {
+    const redditData = await fetch(
+      "https://www.reddit.com/r/Smolderweb/about.json"
+    );
+    const forumData = await fetch(
+      "https://us.forums.blizzard.com/en/wow/c/smolderweb/230/l/latest.json"
+    );
+    const discordData = await fetch(
+      "https://discordapp.com/api/guilds/98368024687673444/widget.json"
+    );
+
+    console.log(discordData);
+  }, []);
+
   return (
     <>
       {/* <h1>SMOLDERWEB.SITE</h1>
@@ -16,12 +31,6 @@ export default function MainPage() {
       <div className="Main">
         <NavBar />
         <div className="Reddit">
-          {/* <p>asdf</p>
-        <div className="ColumnGroup">
-          <p>asdf</p>
-          <p>asdf</p>
-        </div>
-        <p>asdf</p> */}
           <Card title="Reddit" url="https://www.reddit.com/r/Smolderweb/" />
         </div>
         <div className="Discord">
@@ -52,3 +61,7 @@ export function AnotherPage() {
     </div>
   );
 }
+
+// Subreddit api https://www.reddit.com/r/Smolderweb/about.json
+// discord widget https://discordapp.com/api/guilds/98368024687673444/widget.json
+// fourms sniffing https://us.forums.blizzard.com/en/wow/c/smolderweb/230/l/latest.json
