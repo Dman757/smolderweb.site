@@ -7,19 +7,19 @@ import NavBar from "./NavBar";
 export default function MainPage() {
   // TODO A dark/light mode toggle but it's HORDE/ALLIANCE
 
-  useEffect(async () => {
-    const redditData = await fetch(
-      "https://www.reddit.com/r/Smolderweb/about.json"
-    );
-    const forumData = await fetch(
-      "https://us.forums.blizzard.com/en/wow/c/smolderweb/230/l/latest.json"
-    );
-    const discordData = await fetch(
-      "https://discordapp.com/api/guilds/98368024687673444/widget.json"
-    );
+  // useEffect(async () => {
+  //   const redditData = await fetch(
+  //     "https://www.reddit.com/r/Smolderweb/about.json"
+  //   );
+  //   const forumData = await fetch(
+  //     "https://us.forums.blizzard.com/en/wow/c/smolderweb/230/l/latest.json"
+  //   );
+  //   const discordData = await fetch(
+  //     "https://discordapp.com/api/guilds/98368024687673444/widget.json"
+  //   );
 
-    console.log(discordData);
-  }, []);
+  //   console.log(discordData);
+  // }, []);
 
   return (
     <>
@@ -29,7 +29,7 @@ export default function MainPage() {
     </h2> */}
 
       <div className="Main">
-        <NavBar />
+        {/* <NavBar /> */}
         <div className="Reddit">
           <Card title="Reddit" url="https://www.reddit.com/r/Smolderweb/" />
         </div>

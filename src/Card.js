@@ -8,7 +8,7 @@ export default function Card({ title, url }) {
         <h3>{title}</h3>
       </div>
       <div className="asdf">
-        <p>Sup</p>
+        <p>Click Me</p>
       </div>
     </div>
   );
