@@ -1,8 +1,10 @@
 .navbar {
-  top: 0;
-  height: 5rem;
-  width: 100vw;
-  position: fixed;
+  grid-row: 1;
+  grid-column: 1/4;
+  height: 100%;
+  width: 100%;
+  
+  
   background-color: var(--horde-secondary)
 }
 

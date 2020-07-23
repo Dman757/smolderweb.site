@@ -1,6 +1,6 @@
 .imageContainer{
 position: absolute;
-width: 100%;
+width: 4em;
 height: 100%;
 z-index: 5;
 }
