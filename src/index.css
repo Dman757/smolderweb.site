@@ -26,11 +26,13 @@
   --bg-primary: #424242;
   --bg-secondary: #7e7e7e;
 
-  --horde-secondary: #00539C;
   --horde-secondary-gradiant: #00539C;
+  --horde-secondary: #00539C;
+  /* --horde-secondary: #005581;
 
+  --horde-primary: #FFD662; */
   --horde-primary: #FFD662;
-  --horde-primary-gradiant: #FFD662;
+  --horde-primary-gradiant: #FDDB27;
 }
 
 body {
