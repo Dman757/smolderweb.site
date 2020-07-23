@@ -20,6 +20,9 @@
 
   --alliance-primary: rgb(32, 32, 156);
   --alliance-secondary: rgb(223, 198, 59);
+
+  --filter-thing1: grayscale(0);
+  --filter-thing2: grayscale(100%) contrast(40%);
 }
 
 [data-theme="alliance"] {
@@ -33,6 +36,9 @@
   --horde-primary: #FFD662; */
   --horde-primary: #FFD662;
   --horde-primary-gradiant: #FDDB27;
+
+  --filter-thing1: grayscale(100%);
+  --filter-thing2: grayscale(0%);
 }
 
 body {

@@ -1,32 +1,54 @@
 .imageContainer{
-position: relative;
+position: absolute;
 width: 100%;
 height: 100%;
+z-index: 5;
 }
 
-.filterOverlay {
-    position: relative;
-        /* left: 0;
-        top: 0; */
+.buttonOverlay1 {
+    position: absolute;
+    width: 4em;
     height: 100%;
-    width: 50%;
-    backdrop-filter: grayscale(100%);
-    z-index: 10;
+    overflow: hidden;
+    transform: scale(-1) rotate(180deg) translate(1.80em,0);
 }
 
-
-.themeButton{
-    /* background:url(./assets/ha.png) no-repeat; */
+.buttonOverlay2 {
+    position: absolute;
+    width: 4em;
+    height: 100%;
+    overflow: hidden;
+    transform: scale(-1) rotate(180deg) translate(-2.15em,0)
+}
+.themeButton1 {
     position: absolute;
     top: 0;
-    left: 50%;
+    left: -1.85em;
     cursor:pointer;
     border:none;
-    transform: translate(-50%,0);
     width:auto;
-    max-height:100%;
+    overflow:hidden;
+    max-width: 4em;
+    max-height: 5em;
     height: auto;
     object-fit: contain;
-    /* filter: grayscale(100%); */
+    filter: var(--filter-thing1) saturate(200%);
+    transition: 1s filter linear;
+    
 }
 
+ .themeButton2 {
+    position: absolute;
+    top: 0;
+    left: 2.2em;
+    cursor:pointer;
+    border:none;
+    width:auto;
+    overflow:hidden;
+    max-width: 4em;
+    max-height: 5em;
+    height: auto;
+    object-fit: contain;
+    filter: var(--filter-thing2);
+    transition: 1s filter linear;
+}
