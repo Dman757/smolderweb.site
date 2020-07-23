@@ -1,20 +1,56 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import MainPage, { AnotherPage } from "./MainPage";
+import MainPage from "./MainPage";
+
+const localStorageTheme = localStorage.getItem("theme");
+if (localStorageTheme) {
+  toggleTheme(localStorageTheme);
+}
+
+function toggleTheme(toggleOverride = "") {
+  if (toggleOverride) {
+    document.documentElement.setAttribute("data-theme", toggleOverride);
+    localStorage.setItem("theme", toggleOverride);
+    return;
+  }
+
+  const theme = document.documentElement.getAttribute("data-theme");
+
+  switch (theme) {
+    case "horde":
+      document.documentElement.setAttribute("data-theme", "alliance");
+      localStorage.setItem("theme", "alliance");
+      break;
+    case "alliance":
+      document.documentElement.setAttribute("data-theme", "horde");
+      localStorage.setItem("theme", "horde");
+      break;
+    default:
+      document.documentElement.setAttribute("data-theme", "alliance");
+      localStorage.setItem("theme", "alliance");
+      break;
+  }
+}
+
+export const ThemeContext = React.createContext({
+  setTheme: () => {},
+});
 
 function App() {
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route exact path="/">
-          <MainPage />
-        </Route>
-        <Route path="/another">
+    <ThemeContext.Provider value={{ setTheme: toggleTheme }}>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/">
+            <MainPage />
+          </Route>
+          {/* <Route path="/another">
           <AnotherPage />
-        </Route>
-      </Switch>
-    </BrowserRouter>
+        </Route> */}
+        </Switch>
+      </BrowserRouter>
+    </ThemeContext.Provider>
   );
 }
 

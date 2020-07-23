@@ -1,5 +1,6 @@
 import React from "react";
 import "./NavBar.css";
+import ThemeButton from "./ThemeButton";
 
 export default function NavBar() {
   return (
@@ -19,6 +20,9 @@ export default function NavBar() {
           <a className="nav-link" href="#">
             Contact
           </a>
+        </li>
+        <li className="nav-item">
+          <ThemeButton />
         </li>
       </ul>
     </nav>

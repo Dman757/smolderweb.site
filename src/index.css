@@ -22,6 +22,17 @@
   --alliance-secondary: rgb(223, 198, 59);
 }
 
+[data-theme="alliance"] {
+  --bg-primary: #424242;
+  --bg-secondary: #7e7e7e;
+
+  --horde-secondary: #00539C;
+  --horde-secondary-gradiant: #00539C;
+
+  --horde-primary: #FFD662;
+  --horde-primary-gradiant: #FFD662;
+}
+
 body {
   margin: 0;
   font-family: 'Dosis', sans-serif;

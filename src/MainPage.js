@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "./logo.svg";
 // import "./App.css";
 import "./MainPage.css";
@@ -7,19 +7,40 @@ import NavBar from "./NavBar";
 export default function MainPage() {
   // TODO A dark/light mode toggle but it's HORDE/ALLIANCE
 
-  // useEffect(async () => {
-  //   const redditData = await fetch(
-  //     "https://www.reddit.com/r/Smolderweb/about.json"
-  //   );
-  //   const forumData = await fetch(
-  //     "https://us.forums.blizzard.com/en/wow/c/smolderweb/230/l/latest.json"
-  //   );
-  //   const discordData = await fetch(
-  //     "https://discordapp.com/api/guilds/98368024687673444/widget.json"
-  //   );
+  const [redditData, setRedditData] = useState(null);
+  const [forumData, setForumData] = useState(null);
+  const [discordData, setDiscordData] = useState(null);
 
-  //   console.log(discordData);
-  // }, []);
+  async function fetchData() {
+    const redditData = fetch("https://www.reddit.com/r/Smolderweb/about.json");
+    // const forumData = fetch(
+    //   "https://us.forums.blizzard.com/en/wow/c/smolderweb/230/l/latest.json"
+    // );
+    const discordData = fetch(
+      "https://discordapp.com/api/guilds/698368024687673444/widget.json"
+    );
+
+    try {
+      const fetched = await Promise.allSettled([
+        redditData,
+        // forumData,
+        discordData,
+      ]);
+      // console.log("discord", discordData);
+      // console.log("reddit", redditData);
+      // console.log("wow", forumData);
+      const reddit = await fetched[0].value.json();
+      const discord = await fetched[1].value.json();
+      console.log(reddit.data.subscribers);
+      console.log(discord.presence_count);
+    } catch (error) {
+      console.log("error", error);
+    }
+  }
+
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   return (
     <>
@@ -29,7 +50,7 @@ export default function MainPage() {
     </h2> */}
 
       <div className="Main">
-        {/* <NavBar /> */}
+        <NavBar />
         <div className="Reddit">
           <Card title="Reddit" url="https://www.reddit.com/r/Smolderweb/" />
         </div>
@@ -47,21 +68,22 @@ export default function MainPage() {
   );
 }
 
-export function AnotherPage() {
-  return (
-    <div className="App">
-      <p>Sup</p>
-      <iframe
-        src="https://discordapp.com/widget?id=211900829307895819&theme=dark"
-        width="350"
-        height="500"
-        allowtransparency="true"
-        frameborder="0"
-      ></iframe>
-    </div>
-  );
-}
+// export function AnotherPage() {
+//   return (
+//     <div className="App">
+//       <p>Sup</p>
+//       <iframe
+//         src="https://discordapp.com/widget?id=211900829307895819&theme=dark"
+//         width="350"
+//         height="500"
+//         allowtransparency="true"
+//         frameborder="0"
+//       ></iframe>
+//     </div>
+//   );
+// }
 
 // Subreddit api https://www.reddit.com/r/Smolderweb/about.json
 // discord widget https://discordapp.com/api/guilds/98368024687673444/widget.json
 // fourms sniffing https://us.forums.blizzard.com/en/wow/c/smolderweb/230/l/latest.json
+// https://classic.wowhead.com/search?q= //search wowhead
