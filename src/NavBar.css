@@ -8,10 +8,12 @@
 
 .navbar-nav {
   list-style: none;
+  height: 100%;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  /* flex-direction: row; */
+  grid-auto-flow: column;
   justify-items: center;
   width: 100%;
 
@@ -19,6 +21,7 @@
 
 .nav-item {
   height: 100%;
+  width: 100%;
 }
 
 .nav-link {
