@@ -21,7 +21,7 @@
   --alliance-primary: rgb(32, 32, 156);
   --alliance-secondary: rgb(223, 198, 59);
 
-  --filter-thing1: saturate(200%) grayscale(0);
+  --filter-thing1:  grayscale(0);
   --filter-thing2: grayscale(100%) contrast(40%);
 }
 
