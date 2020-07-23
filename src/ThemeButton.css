@@ -32,7 +32,7 @@ z-index: 5;
     max-height: 5em;
     height: auto;
     object-fit: contain;
-    filter: var(--filter-thing1) saturate(200%);
+    filter: var(--filter-thing1);
     transition: 1s filter linear;
     
 }
