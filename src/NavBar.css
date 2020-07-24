@@ -8,6 +8,11 @@
   background-color: var(--horde-secondary)
 }
 
+h1 {
+  color: white;
+  font-size: 1em;
+}
+
 .navbar-nav {
   list-style: none;
   height: 100%;
@@ -16,6 +21,7 @@
   display: grid;
   /* flex-direction: row; */
   grid-auto-flow: column;
+  grid-template-columns: 4fr 1fr;
   justify-items: center;
   width: 100%;
 
@@ -27,9 +33,11 @@
 }
 
 .nav-link {
-  display: flex;
-  justify-content: center;
-  width: 5rem;
   color: var(--text-primary);
   text-decoration: none;
+}
+@media (min-width: 45em) { 
+  h1 {
+    font-size: 1.5em;
+  }
 }

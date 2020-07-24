@@ -1,35 +1,38 @@
 .imageContainer{
 position: absolute;
-width: 4em;
+width: 4rem;
+max-height: 5rem;
 height: 100%;
 z-index: 5;
 }
 
 .buttonOverlay1 {
     position: absolute;
-    width: 4em;
+    width: 2rem;
     height: 100%;
+    max-height: 5rem;
     overflow: hidden;
-    transform: scale(-1) rotate(180deg) translate(1.80em,0);
+    transform: scale(-1) rotate(180deg) translate(1.80rem,0);
 }
 
 .buttonOverlay2 {
     position: absolute;
-    width: 4em;
+    width: 4rem;
+    max-height: 5rem;
     height: 100%;
     overflow: hidden;
-    transform: scale(-1) rotate(180deg) translate(-2.15em,0)
+    transform: scale(-1) rotate(180deg) translate(-2.15rem,0)
 }
 .themeButton1 {
     position: absolute;
     top: 0;
-    left: -1.85em;
+    left: -1.85rem;
     cursor:pointer;
     border:none;
     width:auto;
     overflow:hidden;
-    max-width: 4em;
-    max-height: 5em;
+    max-width: 4rem;
+    max-height: 5rem;
     height: auto;
     object-fit: contain;
     filter: var(--filter-thing1);
@@ -40,13 +43,13 @@ z-index: 5;
  .themeButton2 {
     position: absolute;
     top: 0;
-    left: 2.2em;
+    left: 2.2rem;
     cursor:pointer;
     border:none;
     width:auto;
     overflow:hidden;
-    max-width: 4em;
-    max-height: 5em;
+    max-width: 4rem;
+    max-height: 5rem;
     height: auto;
     object-fit: contain;
     filter: var(--filter-thing2);
