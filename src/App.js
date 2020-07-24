@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import MainPage from "./MainPage";
+import AboutPage from "./AboutPage";
 
 const localStorageTheme = localStorage.getItem("theme");
 if (localStorageTheme) {
@@ -45,9 +46,9 @@ function App() {
           <Route exact path="/">
             <MainPage />
           </Route>
-          {/* <Route path="/another">
-          <AnotherPage />
-        </Route> */}
+          <Route path="/about">
+            <AboutPage />
+          </Route>
         </Switch>
       </BrowserRouter>
     </ThemeContext.Provider>
