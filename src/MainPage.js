@@ -4,6 +4,8 @@ import logo from "./logo.svg";
 import "./MainPage.css";
 import Card from "./Card";
 import NavBar from "./NavBar";
+import redditIcon from "./assets/reddit_border.png";
+import discordIcon from "./assets/discord_svg.svg";
 export default function MainPage() {
   // TODO A dark/light mode toggle but it's HORDE/ALLIANCE
 
@@ -54,6 +56,7 @@ export default function MainPage() {
           <Card
             title="Reddit"
             url="https://www.reddit.com/r/Smolderweb/"
+            icon={redditIcon}
             body={`There's currently ${redditData} people subscribed to the Smolderweb subreddit`}
           />
         </div>
@@ -61,6 +64,7 @@ export default function MainPage() {
           <Card
             title="Discord"
             url="https://discord.com/invite/gaGYyVz"
+            icon={discordIcon}
             body={`There's currently ${discordData} people online in the Smolderweb discord`}
           />
         </div>

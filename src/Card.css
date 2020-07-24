@@ -28,9 +28,13 @@
   z-index: 2;
 }
 
+.additional p {
+  margin: 0 10px;
+}
+
 .card .asdf {
     width: 100%;
-    height: 80%;
+    height: calc(100% - 180px);
     position: absolute;
     bottom: 0;
     right: 0;
@@ -61,4 +65,11 @@
   padding-top: 0;
 }
 
+.social-icon {
+  width: 20vw;
+  margin: auto;
+}
 
+.social-icon img {
+  max-width: 100%;
+}
