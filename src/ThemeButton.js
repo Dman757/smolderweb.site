@@ -6,21 +6,22 @@ export default function ThemeButton() {
   const { setTheme } = useContext(ThemeContext);
 
   return (
-    <>
+    <div className="imageContainer">
       <div
-        className="imageContainer"
+        className="imageButton"
         role="button"
         onClick={() => {
           setTheme();
         }}
-      ></div>
-      <div className="buttonOverlay1">
-        <img className="themeButton1" src={ha} />
+      >
+        <div className="buttonOverlay1">
+          <img className="themeButton1" src={ha} />
+        </div>
+        <div className="buttonOverlay2">
+          <img className="themeButton2" src={ha} />
+        </div>
       </div>
-      <div className="buttonOverlay2">
-        <img className="themeButton2" src={ha} />
-      </div>
-    </>
+    </div>
     // <button
     //   className="themeButton"
     //   onClick={() => {

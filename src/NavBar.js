@@ -33,7 +33,7 @@ export default function NavBar() {
             About
           </NavLink>
         </li>
-        <li className="nav-item">
+        <li className="nav-item theme-btn">
           <ThemeButton />
         </li>
       </ul>
