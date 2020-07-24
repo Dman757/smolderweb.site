@@ -9,8 +9,9 @@
 }
 
 h1 {
-  color: white;
-  font-size: 1em;
+  /* color: white;
+  font-size: 1em; */
+  display:none
 }
 
 .navbar-nav {
@@ -21,23 +22,66 @@ h1 {
   display: grid;
   /* flex-direction: row; */
   grid-auto-flow: column;
-  grid-template-columns: 4fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
   width: 100%;
 
 }
 
-.nav-item {
+.nav-item, .nav-item-header {
   height: 100%;
   width: 100%;
 }
 
-.nav-link {
-  color: var(--text-primary);
-  text-decoration: none;
+.nav-item-header {
+  grid-column: 4
 }
+
+.nav-link {
+  color: var(--text-on-bg);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  animation: 2s slideUp ease forwards .5s;
+  position: relative;
+}
+
+.nav-link-active {
+  color: var(--text-on-bg);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  animation: 2s slideUp ease forwards .5s;
+  position: relative;
+}
+
+.nav-link-active::before, .nav-link::before {
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 0px;
+  left: 0;
+  bottom: -.2rem;
+  background: #ffffff;
+  transition: all .5s ease;
+}
+
+.nav-link-active:before, .nav-link:hover:before {
+  width: 100%;
+}
+
+
 @media (min-width: 45em) { 
   h1 {
     font-size: 1.5em;
+    display: inline-block
+  }
+
+  .nav-item-header {
+    grid-column: 1
+  }
+
+  .navbar-nav {
+    grid-template-columns: 4fr 1fr 1fr 1fr;
   }
 }

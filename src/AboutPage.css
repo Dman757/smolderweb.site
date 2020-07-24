@@ -42,7 +42,7 @@ h1,h2,h3 {
 
 
 @media (min-width: 45em) {    
-    .Main {
+    .about-layout {
     grid-template-rows: 5rem 1fr 1fr;
     grid-template-columns: 1fr;
     }
