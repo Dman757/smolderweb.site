@@ -31,7 +31,11 @@ export default function MainPage() {
       // console.log("wow", forumData);
       const reddit = await fetched[0].value.json();
       const discord = await fetched[1].value.json();
+
+      setRedditData(reddit.data.subscribers);
       console.log(reddit.data.subscribers);
+
+      setDiscordData(discord.presence_count);
       console.log(discord.presence_count);
     } catch (error) {
       console.log("error", error);
@@ -44,18 +48,21 @@ export default function MainPage() {
 
   return (
     <>
-      {/* <h1>SMOLDERWEB.SITE</h1>
-      <h2>
-      Welcome to the unofficial website for the WoW Classic server Smolderweb
-    </h2> */}
-
       <div className="Main">
         <NavBar />
         <div className="Reddit">
-          <Card title="Reddit" url="https://www.reddit.com/r/Smolderweb/" />
+          <Card
+            title="Reddit"
+            url="https://www.reddit.com/r/Smolderweb/"
+            body={`There's currently ${redditData} people subscribed to the Smolderweb subreddit`}
+          />
         </div>
         <div className="Discord">
-          <Card title="Discord" url="https://discord.com/invite/gaGYyVz" />
+          <Card
+            title="Discord"
+            url="https://discord.com/invite/gaGYyVz"
+            body={`There's currently ${discordData} people online in the Smolderweb discord`}
+          />
         </div>
         <div className="WowForums">
           <Card
@@ -67,21 +74,6 @@ export default function MainPage() {
     </>
   );
 }
-
-// export function AnotherPage() {
-//   return (
-//     <div className="App">
-//       <p>Sup</p>
-//       <iframe
-//         src="https://discordapp.com/widget?id=211900829307895819&theme=dark"
-//         width="350"
-//         height="500"
-//         allowtransparency="true"
-//         frameborder="0"
-//       ></iframe>
-//     </div>
-//   );
-// }
 
 // Subreddit api https://www.reddit.com/r/Smolderweb/about.json
 // discord widget https://discordapp.com/api/guilds/98368024687673444/widget.json
