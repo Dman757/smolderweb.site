@@ -14,10 +14,11 @@ export default function AboutPage() {
       <div className="about-text">
         <h1>About</h1>
         <p>
-          Hey there, <b>{`<Undisputed> Magé`}</b> here, thanks for stopping by.
-          This site is a "for fun project" and perpetually work in progress. I
-          wanted to make this to help bridge the various community resources
-          together. <br />
+          Hey there, <b>{`<Undisputed> Magé`}</b> here, welcome to the
+          "unofficial" website for the WoW classic server Smolderweb. This site
+          is a "for fun project" and perpetually work in progress. I wanted to
+          make this to help bridge the various community resources together.{" "}
+          <br />
           <br />I don't really have a project road map but here's a few things
           I'd like to do if I get around to it:
         </p>
