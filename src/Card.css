@@ -9,6 +9,7 @@
   position: relative;
   /* margin: 1.5rem; */
   transition: transform 0.4s;
+  cursor: pointer;
 }
 
 .card h1 {
@@ -78,7 +79,4 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
-  /* background: blue; */
-  /* margin: auto; */
 }

@@ -8,9 +8,6 @@ export default function NavBar() {
     <nav className="navbar">
       <ul className="navbar-nav">
         <li className="nav-item-header">
-          {/* <NavLink className="nav-link" to="/">
-            Home
-          </NavLink> */}
           <h1>Unofficial website for the WoW Classic server Smolderweb</h1>
         </li>
         <li className="nav-item">
