@@ -8,7 +8,12 @@ export default function Card({ title, url, icon, body = "Click Me" }) {
         <h3>{title}</h3>
         <p>{body}</p>
         <div className="reveal">
-          <p>Join Now</p>
+          <div className="social-icon">
+            <img src={icon} />
+          </div>
+          <div className="join">
+            <h2>Join Now</h2>
+          </div>
         </div>
       </div>
       <div className="asdf">
