@@ -21,6 +21,10 @@
   margin-top: 1rem;
 }
 
+.additional h2 {
+  color: var(--text-on-secondary);
+}
+
 .card .additional {
   position: absolute;
   width: 100%;
@@ -115,4 +119,5 @@
     display: flex;
     justify-content: center;
   }
+
 }

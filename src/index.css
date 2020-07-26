@@ -11,6 +11,7 @@
   --horde-primary: #B7262B;
   --horde-primary-gradiant: #b32328;
   --text-on-bg: white;
+  --text-on-secondary: white;
 
   --horde-secondary: #333333;
   --horde-secondary-gradiant: #363636;
@@ -25,6 +26,7 @@
 
   --filter-thing1:  grayscale(0);
   --filter-thing2: grayscale(100%) contrast(40%);
+  ;
 }
 
 [data-theme="alliance"] {
@@ -33,7 +35,8 @@
   
   --horde-secondary-gradiant: #00539C;
   --horde-secondary: #00539C;
-  --text-on-bg: black;
+  --text-on-bg: white;
+  --text-on-secondary: black;
   /* --horde-secondary: #005581;
 
   --horde-primary: #FFD662; */
