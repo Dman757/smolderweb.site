@@ -56,7 +56,7 @@ export default function MainPage() {
         <div className="Discord">
           <Card
             title="Discord"
-            url="https://discord.com/invite/gaGYyVz"
+            url="https://discord.com/invite/EggNSQ6"
             icon={discordIcon}
             body={`There's currently ${discordData} people online in the Smolderweb Discord`}
           />
