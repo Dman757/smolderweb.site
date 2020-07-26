@@ -15,10 +15,10 @@ export default function ThemeButton() {
         }}
       >
         <div className="buttonOverlay1">
-          <img className="themeButton1" src={ha} />
+          <img className="themeButton1" src={ha} alt="horde symbol" />
         </div>
         <div className="buttonOverlay2">
-          <img className="themeButton2" src={ha} />
+          <img className="themeButton2" src={ha} alt="alliance symbol" />
         </div>
       </div>
     </div>

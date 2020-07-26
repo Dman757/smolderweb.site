@@ -9,7 +9,7 @@ export default function Card({ title, url, icon, body = "Click Me" }) {
         <p>{body}</p>
         <div className="reveal">
           <div className="social-icon">
-            <img src={icon} />
+            <img src={icon} alt={`${title} logo`} />
           </div>
           <div className="join">
             <h2>Join Now</h2>
@@ -18,7 +18,7 @@ export default function Card({ title, url, icon, body = "Click Me" }) {
       </div>
       <div className="asdf">
         <div className="social-icon">
-          <img src={icon} />
+          <img src={icon} alt={`${title} logo`} />
         </div>
       </div>
     </div>

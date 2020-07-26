@@ -9,7 +9,11 @@ export default function AboutPage() {
     <div className="about-layout">
       <NavBar />
       <div>
-        <img className="construction-image" src={construction} />
+        <img
+          className="construction-image"
+          src={construction}
+          alt="construction sign"
+        />
       </div>
       <div className="about-text">
         <h1>About</h1>
