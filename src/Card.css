@@ -15,34 +15,29 @@
 .card h1 {
   text-align: center;
 }
-.card h3 {
-    padding-left: 10px;
+
+.card h2 {
+  margin-left: 1rem;
+  margin-top: 1rem;
 }
 
 .card .additional {
   position: absolute;
   width: 100%;
-  height: 180px;
+  height: 95%;
   background: linear-gradient(var(--horde-primary), var(--horde-primary-gradiant));
-  transition: height 0.4s;
+  /* transition: height 0.4s; */
   overflow: hidden;
   z-index: 2;
 }
 
 .additional p {
-  margin: 0 10px;
+  font-size: 1.2rem;
+  margin: 0 1rem 0 1.2rem;
 }
 
 .card .asdf {
-    width: 100%;
-    height: calc(100% - 180px);
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: 1;
-    box-sizing: border-box;
-    padding: 1rem;
-    padding-top: 0;
+    display:none;
   }
 
 .card:hover {
@@ -55,15 +50,7 @@
 }
 
 .card .reveal {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 180px;
-  right: 0;
-  z-index: 1;
-  box-sizing: border-box;
-  padding: 1rem;
-  padding-top: 0;
+  display: none;
 }
 
 .social-icon {
@@ -76,7 +63,56 @@
 }
 
 .join {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+  display: none;
+}
+
+.additional-container {
+  display: grid;
+  grid-template-columns: 2fr auto;
+}
+
+
+@media (min-width: 45em) { 
+  
+  .card .reveal {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 180px;
+    right: 0;
+    z-index: 1;
+    box-sizing: border-box;
+    padding: 1rem;
+    padding-top: 0;
+    display: block;
+  }
+
+  .card .asdf {
+    width: 100%;
+    height: calc(100% - 180px);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    box-sizing: border-box;
+    padding: 1rem;
+    padding-top: 0;
+    display: block;
+  }
+
+  .card .additional {
+    position: absolute;
+    width: 100%;
+    height: 180px;
+    background: linear-gradient(var(--horde-primary), var(--horde-primary-gradiant));
+    transition: height 0.4s;
+    overflow: hidden;
+    z-index: 2;
+  }
+  
+  .join {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 }

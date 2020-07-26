@@ -5,7 +5,7 @@ export default function Card({ title, url, icon, body = "Click Me" }) {
   return (
     <div className="card" onClick={() => window.location.assign(url)}>
       <div className="additional">
-        <h3>{title}</h3>
+        <h2>{title}</h2>
         <p>{body}</p>
         <div className="reveal">
           <div className="social-icon">
