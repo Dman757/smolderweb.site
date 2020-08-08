@@ -1,6 +1,6 @@
 .about-layout {
     display: grid;
-    height: 100vh;
+    /* height: 100vh; */
     /* padding-top: max(6rem, 15vmin); */
     justify-content: center;
     justify-items: center;
@@ -9,7 +9,7 @@
 
     /* grid-template-columns: minmax(20px, 1fr) repeat(2, minmax(0, 100px)) minmax(20px, 1fr); */
     
-    grid-template-rows: 5rem 1fr 1fr;
+    grid-template-rows: 5rem auto 1fr auto;
     grid-template-columns: 1fr;
 
     grid-auto-flow: column;
@@ -20,6 +20,7 @@
     margin: 0 15px;
     font-size: 1rem;
     color: var(--text-on-bg);
+    justify-self: start;
 }
 
 /* .Reddit {
@@ -43,7 +44,7 @@ h1,h2,h3 {
 
 @media (min-width: 45em) {    
     .about-layout {
-    grid-template-rows: 5rem 1fr 1fr;
+    grid-template-rows: 5rem auto 1fr auto;
     grid-template-columns: 1fr;
     }
 

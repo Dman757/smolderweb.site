@@ -1,6 +1,6 @@
 import React from "react";
 
-import construction from "./assets/construction.jpg";
+import construction from "./assets/construction_sign.jpg";
 import "./AboutPage.css";
 
 import NavBar from "./NavBar";
@@ -8,13 +8,6 @@ export default function AboutPage() {
   return (
     <div className="about-layout">
       <NavBar />
-      <div>
-        <img
-          className="construction-image"
-          src={construction}
-          alt="construction sign"
-        />
-      </div>
       <div className="about-text">
         <h1>About</h1>
         <p>
@@ -37,6 +30,15 @@ export default function AboutPage() {
             this site.
           </li>
         </ul>
+      </div>
+      <div>
+        <img
+          className="construction-image"
+          src={construction}
+          alt="construction sign"
+        />
+      </div>
+      <div className="about-text">
         <p>
           {`Site made by `}
           <a href="https://classic.warcraftlogs.com/character/us/smolderweb/mag%C3%A9">
