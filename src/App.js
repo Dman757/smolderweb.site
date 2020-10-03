@@ -49,6 +49,9 @@ function App() {
           <Route exact path="/about">
             <AboutPage />
           </Route>
+          <Route exact path="/undisputed">
+          {window.location.href = 'https://discord.gg/Vxw32cW'}
+          </Route>
         </Switch>
       </BrowserRouter>
     </ThemeContext.Provider>
