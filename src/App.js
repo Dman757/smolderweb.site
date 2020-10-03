@@ -52,6 +52,9 @@ function App() {
           <Route exact path="/undisputed">
           {window.location.href = 'https://discord.gg/Vxw32cW'}
           </Route>
+          <Route exact path="/und">
+          {window.location.href = 'https://discord.gg/Vxw32cW'}
+          </Route>
         </Switch>
       </BrowserRouter>
     </ThemeContext.Provider>
