@@ -1,6 +1,6 @@
 import React from "react";
 
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import MainPage from "./MainPage";
 import AboutPage from "./AboutPage";
 
@@ -65,6 +65,36 @@ function App() {
               return null;
             }}
           />
+          <Route
+            exact
+            path="/discord"
+            component={() => {
+              window.location.href = "https://discord.com/invite/EggNSQ6";
+              return null;
+            }}
+          />
+          <Route
+            exact
+            path="/reddit"
+            component={() => {
+              window.location.href = "https://www.reddit.com/r/Smolderweb/";
+              return null;
+            }}
+          />
+
+          <Route
+            exact
+            path="/forums"
+            component={() => {
+              window.location.href =
+                "https://us.forums.blizzard.com/en/wow/c/smolderweb";
+              return null;
+            }}
+          />
+
+          <Route path="*">
+            <Redirect to="/" />
+          </Route>
         </Switch>
       </BrowserRouter>
     </ThemeContext.Provider>
