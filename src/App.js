@@ -49,12 +49,22 @@ function App() {
           <Route exact path="/about">
             <AboutPage />
           </Route>
-          <Route exact path="/undisputed">
-          {window.location.href = 'https://discord.gg/Vxw32cW'}
-          </Route>
-          <Route exact path="/und">
-          {window.location.href = 'https://discord.gg/Vxw32cW'}
-          </Route>
+          <Route
+            exact
+            path="/undisputed"
+            component={() => {
+              window.location.href = "https://discord.gg/Vxw32cW";
+              return null;
+            }}
+          />
+          <Route
+            exact
+            path="/und"
+            component={() => {
+              window.location.href = "https://discord.gg/Vxw32cW";
+              return null;
+            }}
+          />
         </Switch>
       </BrowserRouter>
     </ThemeContext.Provider>
