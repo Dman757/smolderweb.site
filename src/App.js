@@ -81,7 +81,6 @@ function App() {
               return null;
             }}
           />
-
           <Route
             exact
             path="/forums"
@@ -91,7 +90,14 @@ function App() {
               return null;
             }}
           />
-
+          <Route
+            exact
+            path="/autonomy"
+            component={() => {
+              window.location.href = "https://discord.gg/QFhKJdht43";
+              return null;
+            }}
+          />
           <Route path="*">
             <Redirect to="/" />
           </Route>
